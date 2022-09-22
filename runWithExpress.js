@@ -1,12 +1,17 @@
 /* require() is a built-in function to include external modules that exist in separate files */
 var express = require("express");
+
 const {response, json} = require("express");
+
 /* express() utiliser pour créer une application basée sur le frameWork express*/
 var app = express();
+
 /* pour la gestion des routes on peut utiliser la fonction get*/
 app.get("/" /* Mettez rien par défaut */,function (req, resp){
+
     /* Cette fonction doit être exécutée une fois j'exécute cette route-là*/
     resp.setHeader("content-type", "text/html");
+
     resp.send("<h1>Congratulation ie017, Express is running</h1>");
 });
 app.get("/student/:id", (req, resp)=>{
